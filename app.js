@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
       res.render("home", {
         startingContent: homeStartingContent,
         posts: posts
-        });
+      });
     }
   });
 });
@@ -51,7 +51,6 @@ app.get("/compose", (req, res) => {
 });
 
 app.post("/compose", (req, res) => {
-
   const post = new Post({
     title: req.body.postTitle,
     content: req.body.postBody
